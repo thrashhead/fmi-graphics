@@ -62,3 +62,15 @@ def get_line_pixels(x1, y1, x2, y2):
   else:
     # passing argument as 1 to plot (y,x)
     return list(plotPixel(y1, x1, y2, x2, dy, dx, 1))
+  
+def neighbour_points(x, y):
+  yield x + 1, y
+  yield x + 1, y + 1
+  yield x + 1, y - 1
+  yield x - 1, y
+  yield x - 1, y + 1
+  yield x - 1, y - 1
+  yield x, y + 1
+  yield x, y - 1
+
+  
